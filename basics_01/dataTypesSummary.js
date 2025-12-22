@@ -25,3 +25,28 @@ let myObj = {
 const myFunction = function (){
     console.log("hellow world")
 }
+
+// **********************************************************************
+
+// Stack memory (Primitive data),  Heap memory (non Primitive data) 
+
+let myName = "Pushpendra Kumar"
+let anotherName = myName
+anotherName = "PKVerma"
+
+console.log(myName)        // Pushpendra Kumar
+console.log(anotherName)   // PKVerma
+
+let userOne = {
+    email: "pkverma@gmail.com",
+    upi: "user@abl",
+}
+
+let userTwo = userOne
+
+userTwo.email = "pushpa@gmail.com"
+
+console.log(userOne.email)  // pushpa@gmail.com
+console.log(userTwo.email)  // pushpa@gmail.com
+
+
