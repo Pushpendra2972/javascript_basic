@@ -59,3 +59,30 @@ function loggedIn(name){
 
 console.log(loggedIn())
 console.log(loggedIn("ram"))
+
+
+
+
+// pasing multiple argument via one parameter
+
+function Numbers(...num){
+    return num
+}
+
+console.log(Numbers(100, 200, 300, 400))
+
+
+
+// accesing object entries via function
+
+
+function getObjectValues(obj){
+    return obj.price
+}
+
+const course = {
+    name: "english",
+    price: "500"
+}
+
+console.log(getObjectValues(course))
