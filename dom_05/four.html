@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM | chai aur code</title>
+</head>
+<body style="background-color: black; color: white">
+    <ul class="language">
+        <li>JAVASCRIPT</li>
+    </ul>
+</body>
+  <script>
+      
+      // add new nodes 
+      
+     function language(langName ){
+       const list = document.createElement('li')
+       list.innerHTML = `${langName}`
+       
+       const ul = document.querySelector('.language')
+       ul.appendChild(list)
+
+     }
+
+     language('HTML')
+     language('CSS')
+
+    
+     function optilanguage(langName){
+        const list = document.createElement('li')
+        list.appendChild(document.createTextNode(`${langName}`))
+
+        const ul = document.querySelector('.language')
+        ul.appendChild(list)
+     }
+
+     optilanguage('PYTHON')
+     optilanguage('MONGO-DB')  
+
+
+     // Edit 
+
+    const fourth_lang = document.querySelector('li:nth-child(4)')
+    // fourth_lang.innerHTML = 'MOJO'
+     const newLi = document.createElement('li')
+     newLi.textContent = 'MOJO'
+     
+     fourth_lang.replaceWith(newLi)
+
+
+
+    // Remove
+
+    const lastLanguage = document.querySelector('li:last-child')
+    lastLanguage.remove()
+
+
+  </script>
+</html>
